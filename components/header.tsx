@@ -19,7 +19,7 @@ export function Header() {
     <header className="container max-w-7xl mx-auto px-4 py-12 flex items-center justify-between">
       <Link href="/">
         <div className="text-3xl font-bold tracking-tighter">
-          Saad<span className="text-primary">.</span>
+          Zubaer<span className="text-primary">.</span>
         </div>
       </Link>
       <div className="hidden md:flex items-center gap-8">

@@ -61,13 +61,13 @@ const skillsData = {
 
 const aboutData = {
   title: "About me",
-  description: "Saad Ahmed, a Bangladeshi software engineer with 7 years of experience. Fluent in English and Bengali. Reach me at contact@saadahmedev.com.",
+  description: "Md Zubaer Rahman, a Bangladeshi software engineer with 7 years of experience. Fluent in English and Bengali. Reach me at zubaer.rahman@example.com.",
   info: [
-    { label: "Name", value: "Saad Ahmed" },
+    { label: "Name", value: "Md Zubaer Rahman" },
     { label: "Experience", value: "7 Years" },
     { label: "Phone", value: "TBA" },
     { label: "Nationality", value: "Bangladeshi" },
-    { label: "Email", value: "contact@saadahmedev.com" },
+    { label: "Email", value: "zubaer.rahman@example.com" },
     { label: "Languages", value: "English, Bengali" },
   ],
 };

@@ -17,7 +17,6 @@ const serviceList = [
     title: "Android Development",
     description: "With five years in Native Android, I've built optimized, high-performance mobile apps using Kotlin.",
     href: "#",
-    active: true, // Item 02 is highlighted in the screenshot
   },
   {
     num: "03",
@@ -56,21 +55,22 @@ export default function Expertise() {
               {/* Top part / Number & Arrow */}
               <div className="w-full flex justify-between items-center">
                 <div 
-                  className={`text-5xl font-extrabold text-transparent ${service.active ? "text-primary/10" : ""} transition-all duration-500`}
-                  style={{ WebkitTextStroke: '1px #f0f0f0' }}
+                  className="text-5xl font-extrabold text-transparent transition-all duration-500 [-webkit-text-stroke:1px_#f0f0f0] group-hover:[-webkit-text-stroke:1px_#00ff99]"
                 >
                   {service.num}
                 </div>
                 <Link 
                   href={service.href} 
-                  className={`w-[70px] h-[70px] rounded-full flex justify-center items-center transition-all duration-500 ${service.active ? "bg-primary" : "bg-white"} group-hover:bg-primary`}
+                  className="w-[70px] h-[70px] rounded-full bg-white flex justify-center items-center transition-all duration-500 group-hover:bg-primary hover:-rotate-45"
                 >
-                  <MoveDownRight className="text-secondary text-4xl transition-transform duration-500 group-hover:-rotate-45" />
+                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 16 16" className="text-secondary text-3xl transition-all duration-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" d="M14 13.5a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1 0-1h4.793L2.146 2.854a.5.5 0 1 1 .708-.708L13 12.293V7.5a.5.5 0 0 1 1 0z"></path>
+                  </svg>
                 </Link>
               </div>
 
               {/* Title */}
-              <h2 className={`text-4xl md:text-[42px] font-bold leading-none transition-all duration-500 ${service.active ? "text-primary" : "text-white"} group-hover:text-primary`}>
+              <h2 className="text-4xl md:text-[42px] font-bold leading-none transition-all duration-500 text-white group-hover:text-primary">
                 {service.title}
               </h2>
 
