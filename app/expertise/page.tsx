@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Header } from "@/components/header";
-import { MoveDownRight, MoveRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 const serviceList = [
@@ -61,11 +61,9 @@ export default function Expertise() {
                 </div>
                 <Link 
                   href={service.href} 
-                  className="w-[70px] h-[70px] rounded-full bg-white flex justify-center items-center transition-all duration-500 group-hover:bg-primary hover:-rotate-45"
+                  className="w-[70px] h-[70px] rounded-full bg-white flex justify-center items-center group/arrow transition-all duration-500 hover:bg-primary"
                 >
-                  <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 16 16" className="text-secondary text-3xl transition-all duration-500" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M14 13.5a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1 0-1h4.793L2.146 2.854a.5.5 0 1 1 .708-.708L13 12.293V7.5a.5.5 0 0 1 1 0z"></path>
-                  </svg>
+                  <ArrowUpRight className="text-secondary text-4xl transform transition-transform duration-500 group-hover/arrow:rotate-45" />
                 </Link>
               </div>
 
