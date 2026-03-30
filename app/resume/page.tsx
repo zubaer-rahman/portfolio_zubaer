@@ -89,15 +89,11 @@ export default function Resume() {
       <Header />
 
       <main className="container max-w-7xl mx-auto px-4 py-12 md:py-24 flex-1">
-        <div className="flex flex-col md:flex-row gap-16 md:gap-24">
+        <div className="flex flex-col md:flex-row gap-10 md:gap-16">
           
           {/* Sidebar Tabs */}
-          <aside className="w-full md:w-[280px] lg:w-[320px] shrink-0">
-            <h2 className="text-4xl md:text-5xl font-bold mb-10 tracking-tight">Why hire me?</h2>
-            <p className="text-muted-foreground mb-12 leading-relaxed">
-              I specialize in high-performance architectures and scalable backend solutions for modern applications.
-            </p>
-            <div className="flex flex-col gap-4">
+          <aside className="w-full md:w-[210px] shrink-0 pt-2">
+            <div className="flex flex-col gap-6">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
@@ -116,7 +112,7 @@ export default function Resume() {
           </aside>
 
           {/* Content Area */}
-          <div className="flex-1 lg:pl-10">
+          <div className="flex-1 lg:pl-16">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
