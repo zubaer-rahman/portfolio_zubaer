@@ -82,15 +82,26 @@ export default function Projects() {
             <div className="flex items-center gap-4">
               <Link 
                 href={project.links.external}
-                className="w-20 h-20 rounded-full bg-card inline-flex items-center justify-center group hover:bg-primary transition-all duration-300 border border-white/5"
+                className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group transition-all duration-300"
               >
-                <ArrowUpRight className="text-white w-10 h-10 group-hover:rotate-45 transition-all duration-300" strokeWidth={2.5} />
+                <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" className="text-white text-3xl group-hover:text-primary transition-all duration-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
               </Link>
               <Link 
                 href={project.links.repo}
-                className="w-20 h-20 rounded-full bg-card inline-flex items-center justify-center group hover:bg-primary transition-all duration-300 border border-white/5"
+                className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group opacity-50 cursor-not-allowed transition-all duration-300"
               >
-                <FaGitlab className="text-white text-[40px] group-hover:scale-110 transition-all duration-300" />
+                <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" className="text-white text-3xl group-hover:text-primary transition-all duration-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                  <path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                  <path d="M17 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
+                  <path d="M7 8l0 8"></path>
+                  <path d="M9 18h6a2 2 0 0 0 2 -2v-5"></path>
+                  <path d="M14 14l3 -3l3 3"></path>
+                </svg>
               </Link>
             </div>
           </motion.div>
