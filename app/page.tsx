@@ -27,7 +27,7 @@ export default function Home() {
           >
             <h3 className="text-xl md:text-2xl font-medium tracking-wide">Hello I&apos;m</h3>
             <h1 className="text-[42px] sm:text-5xl md:text-6xl lg:text-[72px] font-bold text-primary tracking-tight md:whitespace-nowrap">
-              Md Zubaer Rahman
+              Saad Ahmed
             </h1>
             <h2 className="text-2xl md:text-3xl font-bold opacity-90 tracking-wide">
               Software Engineer
@@ -68,7 +68,7 @@ export default function Home() {
               <div className="absolute inset-[0.6%] rounded-full overflow-hidden z-20">
                 <Image 
                   src="/profile.png" 
-                  alt="Md Zubaer Rahman" 
+                  alt="Saad Ahmed" 
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                   className="object-contain -translate-x-2 scale-105"

@@ -61,16 +61,14 @@ const skillsData = {
 
 const aboutData = {
   title: "About me",
-  description: "I am a dedicated software engineer with a focus on creating impact through clean code and efficient architectures.",
+  description: "Saad Ahmed, a Bangladeshi software engineer with 7 years of experience. Fluent in English and Bengali. Reach me at contact@saadahmedev.com.",
   info: [
-    { label: "Name", value: "Md Zubaer Rahman" },
-    { label: "Experience", value: "7+ Years" },
-    { label: "Phone", value: "+880 1XXXXXXXXX" },
-    { label: "Skype", value: "zubaer.rahman" },
+    { label: "Name", value: "Saad Ahmed" },
+    { label: "Experience", value: "7 Years" },
+    { label: "Phone", value: "TBA" },
     { label: "Nationality", value: "Bangladeshi" },
-    { label: "Email", value: "zubaer.corexlab@gmail.com" },
-    { label: "Freelance", value: "Available" },
-    { label: "Language", value: "English, Bengali" },
+    { label: "Email", value: "contact@saadahmedev.com" },
+    { label: "Languages", value: "English, Bengali" },
   ],
 };
 
@@ -89,17 +87,17 @@ export default function Resume() {
       <Header />
 
       <main className="container max-w-7xl mx-auto px-4 py-12 md:py-24 flex-1">
-        <div className="flex flex-col md:flex-row gap-10 md:gap-16">
+        <div className="flex flex-col md:flex-row gap-8 md:gap-12">
           
           {/* Sidebar Tabs */}
-          <aside className="w-full md:w-[210px] shrink-0 pt-2">
-            <div className="flex flex-col gap-6">
+          <aside className="w-full md:w-[260px] shrink-0 pt-2">
+            <div className="flex flex-col gap-5">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={cn(
-                    "w-full py-4 px-6 rounded-xl text-lg font-bold transition-all duration-300 text-left md:text-center",
+                    "w-full py-3 px-6 rounded-lg text-lg font-bold transition-all duration-300 text-left md:text-center",
                     activeTab === tab.id
                       ? "bg-primary text-primary-foreground shadow-[0_0_15px_rgba(0,255,153,0.3)]"
                       : "bg-[#27272c] hover:bg-[#27272c]/80 text-foreground/80 hover:text-primary"
@@ -112,7 +110,7 @@ export default function Resume() {
           </aside>
 
           {/* Content Area */}
-          <div className="flex-1 lg:pl-16">
+          <div className="flex-1 lg:pl-4">
             <AnimatePresence mode="wait">
               <motion.div
                 key={activeTab}
@@ -130,7 +128,7 @@ export default function Resume() {
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                       {experienceData.items.map((item, index) => (
-                        <div key={index} className="bg-[#27272c] p-10 rounded-2xl space-y-4 shadow-sm hover:translate-y-[-4px] transition-all duration-300">
+                        <div key={index} className="bg-[#27272c] p-10 rounded-xl space-y-4 shadow-sm hover:translate-y-[-4px] transition-all duration-300">
                           <span className="text-primary font-bold text-sm tracking-widest">{item.duration}</span>
                           <h3 className="text-2xl font-bold text-white tracking-tight">{item.role}</h3>
                           <div className="flex items-center gap-3">
@@ -151,7 +149,7 @@ export default function Resume() {
                     </div>
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                       {educationData.items.map((item, index) => (
-                        <div key={index} className="bg-[#27272c] p-10 rounded-2xl space-y-4 shadow-sm hover:translate-y-[-4px] transition-all duration-300">
+                        <div key={index} className="bg-[#27272c] p-10 rounded-xl space-y-4 shadow-sm hover:translate-y-[-4px] transition-all duration-300">
                           <span className="text-primary font-bold text-sm tracking-widest">{item.duration}</span>
                           <h3 className="text-2xl font-bold text-white tracking-tight">{item.degree}</h3>
                           <div className="flex items-center gap-3">
@@ -172,8 +170,14 @@ export default function Resume() {
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
                       {skillsData.items.map((skill, index) => (
-                        <div key={index} className="bg-[#27272c] p-8 rounded-2xl flex items-center justify-center text-center font-bold text-lg hover:text-primary transition-all cursor-default shadow-sm hover:shadow-primary/5">
-                          {skill}
+                        <div key={index} className="relative bg-[#27272c] p-8 rounded-xl flex items-center justify-center text-center group transition-all cursor-pointer shadow-sm hover:shadow-primary/10">
+                          <svg stroke="currentColor" fill="currentColor" strokeWidth="0" role="img" viewBox="0 0 24 24" height="60" width="60" className="opacity-70 group-hover:opacity-100 group-hover:text-primary transition-all duration-300">
+                            <path d="M24 24H0V0h24L12 12Z"></path>
+                          </svg>
+                          <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-[#27272c] text-primary px-3 py-1.5 rounded-lg text-sm font-bold opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none whitespace-nowrap shadow-xl border border-primary/20">
+                            {skill}
+                            <div className="absolute bottom-[-6px] left-1/2 -translate-x-1/2 w-3 h-3 bg-[#27272c] rotate-45 border-r border-b border-primary/20" />
+                          </div>
                         </div>
                       ))}
                     </div>
