@@ -14,19 +14,21 @@ import "slick-carousel/slick/slick-theme.css";
 const projects = [
   {
     num: "01",
-    title: "Toffee",
-    description: "I improved video streaming quality and app performance by 30% through focused code refactoring and cleanup. I integrated Firebase, Mixpanel, Adjust, and Facebook analytics to gather user insights, and built a Customer Feedback Loop (CFL) to enhance engagement and retention.",
-    stack: ["Java", "Kotlin", "XML", "Retrofit", "Dagger-Hilt", "Live Data", "EXO Player", "MVVM", "Gradle"],
-    image: "/toffee.png",
-    links: { external: "#", repo: "#" },
+    title: "U-Send Fulfillment",
+    category: "Professional Project",
+    description: "I optimized dashboard usability and system performance by developing high-fidelity interfaces for complex data visualization, tracking, and order management. I streamlined intricate user flows to create a seamless and highly efficient fulfillment experience that improved overall operational efficiency.",
+    stack: ["MongoDB", "Express", "React", "Node.js", "Stripe", "Shopify Admin API", "17Track"],
+    image: "/projects/u-send_fulfillment.png",
+    links: { external: "https://www.u-sendfulfillment.com/", repo: "#" },
   },
   {
     num: "02",
-    title: "Fintech Wallet",
-    description: "Developed a secure, high-performance digital wallet application featuring real-time transaction tracking, multi-currency support, and biometric authentication. Focused on data encryption and seamless banking integrations for a frictionless user experience.",
-    stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Tailwind CSS", "Prisma", "Docker", "Stripe"],
-    image: "/toffee.png",
-    links: { external: "#", repo: "#" },
+    title: "Kindora",
+    category: "Personal Project",
+    description: "I developed a high-performance platform connecting socially conscious individuals with impact-driven organizations through algorithmic matching. It streamlines engagement with real-time activity tracking and specialized dashboards, providing a seamless and highly efficient cross-platform experience.",
+    stack: ["Next.js", "TypeScript", "Node.js", "PostgreSQL (Supabase)", "MongoDB", "Redis (Upstash)", "Tailwind CSS", "Prisma", "tRPC", "Zod", "Cloudinary"],
+    image: "/projects/kindora.png",
+    links: { external: "https://kindora-teal.vercel.app/", repo: "https://github.com/zubaer-rahman/kindora" },
   }
 ];
 
@@ -54,7 +56,7 @@ export default function Projects() {
     <div className="min-h-screen bg-background text-foreground flex flex-col font-sans selection:bg-primary/30">
       <Header />
 
-      <main className="container max-w-7xl mx-auto px-4 flex-1 flex items-start justify-center py-20 xl:py-32">
+      <main className="container max-w-7xl mx-auto px-4 flex-1 flex flex-col py-20 lg:py-10">
         <div className="flex flex-col xl:flex-row gap-12 xl:gap-[80px] items-start w-full">
           
           {/* Left: Project Details */}
@@ -65,9 +67,19 @@ export default function Projects() {
                 <div className="text-7xl md:text-[100px] leading-none font-extrabold text-transparent" style={{ WebkitTextStroke: '1px #f0f0f0' }}>
                   {project.num}
                 </div>
-                <h2 className="text-[36px] sm:text-5xl font-bold text-white transition-all duration-500 capitalize leading-none">
-                  {project.title}
-                </h2>
+                <div className="flex flex-col gap-4">
+                  <div className="flex items-center gap-3">
+                    <div className="px-3 py-1 bg-primary/10 border border-primary/20 rounded-full flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_rgba(0,255,153,0.8)]" />
+                      <span className="text-primary font-bold uppercase tracking-[0.2em] text-[10px]">
+                        {project.category}
+                      </span>
+                    </div>
+                  </div>
+                  <h2 className="text-[36px] sm:text-5xl font-bold text-white transition-all duration-500 capitalize leading-none">
+                    {project.title}
+                  </h2>
+                </div>
                 <div className="min-h-[140px]">
                   <p className="text-muted-foreground leading-relaxed text-[16.5px] xl:max-w-md pt-1">
                     {project.description}
@@ -90,14 +102,24 @@ export default function Projects() {
 
               {/* Links */}
               <div className="flex items-center gap-4">
-                <Link href={project.links.external} className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group transition-all duration-300">
+                <Link 
+                  href={project.links.external} 
+                  target={project.links.external !== "#" ? "_blank" : undefined}
+                  rel={project.links.external !== "#" ? "noopener noreferrer" : undefined}
+                  className={`w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group transition-all duration-300 ${project.links.external === "#" ? "opacity-50 cursor-not-allowed" : ""}`}
+                >
                   <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" className="text-white text-3xl group-hover:text-primary transition-all duration-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                     <polyline points="15 3 21 3 21 9"></polyline>
                     <line x1="10" y1="14" x2="21" y2="3"></line>
                   </svg>
                 </Link>
-                <Link href={project.links.repo} className="w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group opacity-50 cursor-not-allowed transition-all duration-300">
+                <Link 
+                  href={project.links.repo} 
+                  target={project.links.repo !== "#" ? "_blank" : undefined}
+                  rel={project.links.repo !== "#" ? "noopener noreferrer" : undefined}
+                  className={`w-[70px] h-[70px] rounded-full bg-white/5 flex justify-center items-center group transition-all duration-300 ${project.links.repo === "#" ? "opacity-50 cursor-not-allowed" : ""}`}
+                >
                   <svg stroke="currentColor" fill="none" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round" className="text-white text-3xl group-hover:text-primary transition-all duration-300" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 18m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>
                     <path d="M7 6m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"></path>

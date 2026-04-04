@@ -33,8 +33,8 @@ export default function Home() {
               Software Engineer
             </h2>
             <p className="max-w-md text-muted-foreground leading-relaxed">
-              I am a Backend Developer, the architect of the digital realm, and the guardian of data integrity.
-              With a deep passion for coding, I transform complex algorithms and databases into seamless, user-friendly experiences.
+              I am a Frontend Developer, the architect of the visual realm, and the guardian of user interaction. 
+              With a deep passion for design, I transform complex interfaces and wireframes into seamless, pixel-perfect experiences.
             </p>
             
             <div className="flex flex-wrap items-center gap-6 pt-4">
@@ -45,13 +45,20 @@ export default function Home() {
                 View Resume <ArrowUpRight className="ml-2 w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </Link>
               <div className="flex gap-4">
-                {[FaGithub, FaLinkedin, FaTwitter, FaFacebook].map((Icon, i) => (
+                {[
+                  { icon: FaGithub, href: "https://github.com/zubaer-rahman" },
+                  { icon: FaLinkedin, href: "https://www.linkedin.com/in/zubaer-rahman/" },
+                  { icon: FaTwitter, href: "https://x.com/ZubaerSumon" },
+                  { icon: FaFacebook, href: "https://www.facebook.com/zubaer.sumon" }
+                ].map((social, i) => (
                   <Link 
                     key={i} 
-                    href="#" 
+                    href={social.href} 
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="w-10 h-10 rounded-full border border-primary flex items-center justify-center text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300"
                   >
-                    <Icon className="w-4 h-4" />
+                    <social.icon className="w-4 h-4" />
                   </Link>
                 ))}
               </div>
@@ -120,10 +127,10 @@ export default function Home() {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 mb-12"
         >
           {[
-            { value: "7", label: "Years of experience" },
-            { value: "27", label: "Projects completed" },
-            { value: "4", label: "Technologies mastered" },
-            { value: "7,800", label: "Code commits" }
+            { value: "3", label: "Years of experience" },
+            { value: "12", label: "Projects completed" },
+            { value: "2", label: "Technologies mastered" },
+            { value: "2,700", label: "Code commits" }
           ].map((stat, i) => (
             <div key={i} className="flex items-center gap-4">
               <span className="text-5xl md:text-6xl font-black text-white">{stat.value}</span>

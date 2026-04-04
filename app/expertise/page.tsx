@@ -8,26 +8,14 @@ import Link from "next/link";
 const serviceList = [
   {
     num: "01",
-    title: "Backend Development",
-    description: "I build scalable, high-performance backend systems using microservices, ensuring reliability under heavy loads.",
+    title: "Frontend Development",
+    description: "I specialize in building visually stunning, high-performance user interfaces with a focus on seamless interactions and responsive design across all devices.",
     href: "#",
   },
   {
     num: "02",
-    title: "Android Development",
-    description: "With five years in Native Android, I've built optimized, high-performance mobile apps using Kotlin.",
-    href: "#",
-  },
-  {
-    num: "03",
-    title: "DevOps",
-    description: "I automate CI/CD, streamline deployments, and optimize cloud infrastructure for scalability and reliability.",
-    href: "#",
-  },
-  {
-    num: "04",
-    title: "System Administration",
-    description: "I manage and optimize cloud/on-prem infrastructure, ensuring security, performance, and high availability.",
+    title: "Backend Development",
+    description: "I design and implement robust, scalable server-side architectures and efficient database systems that power modern web applications with speed and security.",
     href: "#",
   },
 ];
@@ -37,7 +25,7 @@ export default function Expertise() {
     <div className="min-h-screen bg-background text-foreground flex flex-col font-sans selection:bg-primary/30">
       <Header />
 
-      <main className="container max-w-7xl mx-auto px-4 flex-1 flex flex-col justify-center py-20 lg:py-10">
+      <main className="container max-w-7xl mx-auto px-4 flex-1 flex flex-col py-20 lg:py-10">
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
